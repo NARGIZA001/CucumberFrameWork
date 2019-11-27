@@ -23,6 +23,15 @@ public class OrderHomePage {
     @FindBy (xpath = "//table[@class='SampleTable']//tr")
     public List<WebElement> orderRows;
 
+    @FindBy (xpath = "//table[@class='SampleTable']//tr//td[2]")
+    public List<WebElement> names;
+
+    @FindBy (xpath = "//table[@class='SampleTable']//tr//td[1]")
+    public  List<WebElement> checkBox;
+
+    @FindBy (id = "ctl00_MainContent_btnDelete")
+    public  WebElement deletebutton;
+
 
 
 

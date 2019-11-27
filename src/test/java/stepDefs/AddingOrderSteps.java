@@ -7,6 +7,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -81,13 +82,23 @@ public class AddingOrderSteps {
     }
 
     @Then("^User Deletes \"([^\"]*)\" from table$")
-    public void user_Deletes_from_table(String name) throws Throwable {
-
+    public void user_Deletes_from_table(String Name) throws Throwable {
+        System.out.println(orderHomePage.names.size());
+        for (int i=0; i<orderHomePage.names.size(); i++){
+            if (orderHomePage.names.get(i).getText().equalsIgnoreCase(Name)){
+                orderHomePage.checkBox.get(i).click();
+            }
+        }
+        Thread.sleep(5000);
+        orderHomePage.deletebutton.click();
+        Thread.sleep(3000);
     }
 
     @Then("^User validates that \"([^\"]*)\" is deleted$")
-    public void user_validates_that_is_deleted(String name) throws Throwable {
-
+    public void user_validates_that_is_deleted(String Name) throws Throwable {
+        for (WebElement element: orderHomePage.names){
+            Assert.assertFalse(element.getText().equalsIgnoreCase(Name));
+        }
     }
 
 

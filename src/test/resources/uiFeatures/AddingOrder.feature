@@ -1,5 +1,5 @@
 
-@TEC-102
+@TEC-102 @ui @regrassionTest
 
 
 Feature: Adding order as per user story
@@ -23,14 +23,14 @@ Feature: Adding order as per user story
         | ScreenSaver  | 2        | Techtorial    | 123N tech | Chicago | IL    | zipCode | 1234567890 | 12/21       |
       Then User verify Order "is NOT" created
 
-  @TECTC-1015
-  Scenario : Verify Delete functionality
+  @TECTC-1015 @smokeTest
+  Scenario Outline: Verify Delete functionality
     Given Navigate to login Page
     Then User logs in with valid credentials username "Tester" password "test"
-    And User Deletes "<Marks Smith>" from table
-    Then User validates that "<Mark Smith>" is deleted
+    And User Deletes "<Name>" from table
+    Then User validates that "<Name>" is deleted
     Examples:
       | Name           |
       | Mark Smith     |
       | Samuel Clemens |
-      |Paul Brown|
+      | Paul Brown     |

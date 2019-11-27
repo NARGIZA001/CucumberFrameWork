@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumberHTML-report","pretty","json:target/cucumber.json"},
         features = "src/test/resources/uiFeatures", //okay got the path now i need the code
         glue = "stepDefs", //providing the code place where
-        dryRun=true,
-        tags ="@TECTC-1015"
+        dryRun=false,
+        tags ={"@ui", "@smokeTest"}
 )
 public class uiTestRunner {
 

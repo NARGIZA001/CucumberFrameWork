@@ -1,4 +1,4 @@
-@TEC-104
+@TEC-104 @ui @regrassionTest
 Feature: Etsy Search Functionality
 
 
@@ -32,7 +32,7 @@ Feature: Etsy Search Functionality
       And User clicks on Free Shipping Button
       Then User validates if all items have the "FREE shipping" label
 
-    @TECTC-1015
+    @TECTC-1016 @smokeTest
     Scenario: Validating over price functionality
       Given Navigate to Etsy Homepage
       When User searches for "carpet"
