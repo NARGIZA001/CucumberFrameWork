@@ -16,6 +16,7 @@ public class VerifyTotalPriceSteps {
     Actions act = new Actions(Driver.driver);
 
 
+
     @When("^User scrolls down and add five items into cart$")
     public void userScrollsDownAndAddFiveItemsIntoCart() throws Throwable {
 

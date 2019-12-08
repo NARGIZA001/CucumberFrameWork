@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class UpdateAddressSteps {
 
-    WebDriver driver;
+
 
     UpdatingAddressPage updatingAddressPage= new UpdatingAddressPage();
     SignInAccountPage signInAccountPage=new SignInAccountPage();

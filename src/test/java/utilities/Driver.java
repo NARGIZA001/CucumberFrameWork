@@ -19,7 +19,7 @@ public class Driver {
     public static WebDriver driverSetup(String browser) {   // utilatily method that helps us to save time and storage . Don't store it in the test class to remember and have it handy.
 
         if (driver != null) {
-            return driver;                                // singleton patter when we wanna use the only one object
+            return driver;                                // singleton pattern when we wanna use the only one object
         }
 //        WebDriver driver;
 
