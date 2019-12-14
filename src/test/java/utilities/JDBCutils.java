@@ -29,11 +29,8 @@ public class JDBCutils {
 
     public static void establishedConnection() throws IOException, SQLException {
                 connection=DriverManager.getConnection(
-                Configuration.getProperties("dbHost"),
-                Configuration.getProperties("dbUsername"),
-                Configuration.getProperties("dbPassword"));
-                statement= connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
-                ResultSet.CONCUR_READ_ONLY);
+                Configuration.getProperties("dbHost"), Configuration.getProperties("dbUsername"), Configuration.getProperties("dbPassword"));
+                statement= connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
     }
 
     /**
